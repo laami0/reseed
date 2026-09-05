@@ -1,0 +1,75 @@
+.back-button-container {
+  position: absolute;
+  z-index: 100;
+  margin-top: 6rem;
+}
+
+.left-panel {
+  background: url('/rethaferguson.jpg');
+  width: 100%;
+  max-width: 1170px;
+  height: 100vh;
+
+  position: relative;
+  top: 0;
+  left: 0;
+
+  background-size: cover;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.flower-edge {
+  position: absolute;
+  top: 0;
+  right: -20px; // this is the overhang
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.panel-background {
+  overflow: visible;
+}
+
+
+
+
+.login-form {
+  align-content: center;
+  margin-right: 7.188rem !important;
+}
+
+.login-title {
+  font-size: 60px;
+  width: 36rem;
+  color: #1D2A1D;
+  border-bottom: 2px solid #1D2A1D;
+}
+
+.login-form-elements {
+  width: 25rem;
+  margin-top: 3.625rem;
+}
+
+.forgot-password-link {
+  width: 100%;
+}
+
+.forgot-password-link a {
+  color: #818F66;
+  font-size: 14px;
+  justify-content: right;
+  display: flex;
+  margin-bottom: 2.25rem;
+}
+
+.login-form-button {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+

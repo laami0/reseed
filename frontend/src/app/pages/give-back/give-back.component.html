@@ -1,0 +1,40 @@
+<!-- Header mit dynamischer Überschrift -->
+<app-header [type]="'c'"></app-header>
+
+<div class="allHeadline">
+  <div class="headlineFlower">
+    <app-flowerhead HeadlineText="Saatgut zurückschicken" type="chauncy"></app-flowerhead>
+  </div>
+</div>
+  <div class="section-form">
+    <h2 class="section-title yorkten-regular">Bestell Übersicht</h2>
+    <div class="section-divider"></div>
+<div class="form-group">
+  <div class="label yorkten-bold">Saatgut</div>
+  <div class="seedInfoBox yorkten-regular">{{ plant_name }}</div>
+</div>
+<div class="form-group">
+  <app-dropdown
+    [label]="'Poststation wählen'"
+    [options]="options"
+    [selected]="selectedOption"
+    (selectionChange)="onSelectionChange($event)">
+  </app-dropdown>
+</div>
+
+<div class="form-group">
+  <div class="label yorkten-bold">Hinweis</div>
+  <div class="hinweistext yorkten-light">
+    Bitte verpacken Sie das Saatgut in die <br />
+    selben Päckchen in denen sie das <br />
+    Saatgut erhalten haben.
+  </div>
+</div>
+    <div class="button-row">
+      <app-main-button ButtonText="Zurückschicken" (click)="onZurueckgeben()"></app-main-button>
+      <app-main-button ButtonText="Kein Saatgut" (click)="onNoSeeds()"></app-main-button>
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    </div>
+  </div>
+<!-- Footer -->
+<app-footer></app-footer>

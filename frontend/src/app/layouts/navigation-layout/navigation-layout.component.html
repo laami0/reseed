@@ -1,0 +1,31 @@
+<div>
+  <div class="navigation px-5 pb-4">
+
+    <div class="logo mr-6">
+      <img class="light" src="logo_light.svg" alt="Logo" height="47"/>
+    </div>
+
+    <nav class="navigation-links yorkten-demi">
+      <a class="mr-6 yorkten-demi" routerLink="/home" routerLinkActive="link-active" ariaCurrentWhenActive="page">Reseed</a>
+      <a class="mr-6 yorkten-demi" routerLink="/saatgut" routerLinkActive="link-active" ariaCurrentWhenActive="page">Saatgut</a>
+      <ng-container *ngIf="isLoggedIn; else guestLinks">
+        <a class="mr-6 yorkten-demi" routerLink="/profile" routerLinkActive="link-active" ariaCurrentWhenActive="page">Profil</a>
+        <a class="mr-6 yorkten-demi" role="button" tabindex="0" (click)="logout()" (keydown.enter)="logout()" (keydown.space)="logout()">Abmelden</a>
+      </ng-container>
+      <ng-template #guestLinks>
+        <a class="mr-6 yorkten-demi" routerLink="/login" routerLinkActive="link-active" ariaCurrentWhenActive="page">Anmelden</a>
+      </ng-template>
+    </nav>
+
+    <div class="has-text-centered">
+      <a routerLink="/warenkorb" routerLinkActive="link-active" ariaCurrentWhenActive="page" class="cart-wrapper">
+        <img class="cart-icon" src="warenkorb.svg" alt="Warenkorb" height="47"/>
+        <span class="cart-count">{{ cartItemCount }}</span>
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
+<router-outlet/>

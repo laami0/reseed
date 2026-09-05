@@ -1,0 +1,44 @@
+<app-header type="c"></app-header>
+
+<app-flowerhead HeadlineText="Bestell Bestätigung"></app-flowerhead>
+
+<div class="confirmation-container">
+
+  <div class="confirmation-header-container yorkten-medium">
+    Bestellübersicht
+  </div>
+
+  <div *ngFor="let item of orderPositions" class="columns is-mobile is-vcentered confirmation-item">
+    <div class="column is-half pl-6">
+      <p class="confirmation-item-title yorkten-demi">{{ item.seed.dt_name }}</p>
+      <p class="confirmation-item-subtitle yorkten-medium">{{ item.seed.lt_name }}</p>
+      <p class="confirmation-item-category yorkten-light">{{ item.seed.category_names }}</p>
+    </div>
+
+    <div class="column is-half">
+      <p class="confirmation-item-quantity yorkten-bold">{{ item.amount }}</p>
+    </div>
+  </div>
+
+  <div class="confirmation-header-container yorkten-medium address-header-container">
+    Kunden Information
+  </div>
+
+  <div class="columns is-mobile contact-container mt-5">
+    <div class="column is-one-third pl-6">
+      <p class="address-title yorkten-medium">Kontakt</p>
+      <div class="address-subtitle yorkten-medium">Name: <span class="address-content yorkten-regular">{{ order.user.name }}</span></div>
+      <p class="address-subtitle yorkten-medium">Email: {{ order.address.email }}</p>
+    </div>
+
+    <div class="column">
+      <p class="address-title yorkten-medium">Versandadresse</p>
+      <p class="address-content yorkten-regular">{{ order.address.first_name }} {{ order.address.last_name }}</p>
+      <p class="address-content yorkten-regular">{{ order.address.street }}</p>
+      <p class="address-content yorkten-regular">{{ order.address.plz }} {{ order.address.city }}</p>
+    </div>
+  </div>
+
+</div>
+
+<app-footer></app-footer>

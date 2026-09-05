@@ -1,0 +1,28 @@
+<div [ngSwitch]="type">
+
+  <div *ngSwitchCase="'checkout'" class="counter-wrapper">
+    <button class="counter-btn" (click)="decrementCheckout()">
+      <span class="material-icons material-symbols-outlined">remove</span>
+    </button>
+    <span class="counter-value">{{ item.quantity }}</span>
+    <button class="counter-btn" (click)="incrementCheckout()">
+      <span class="material-icons material-symbols-outlined">add</span>
+    </button>
+  </div>
+
+  <div *ngSwitchCase="'detailpage'">
+    <div class="counter-wrapper">
+      <button class="counter-btn" (click)="decrementNumber()">
+        <span class="material-icons material-symbols-outlined">remove</span>
+      </button>
+      <span class="counter-value">{{ tempQuantity }}</span>
+      <button class="counter-btn" (click)="incrementNumber()">
+        <span class="material-icons material-symbols-outlined">add</span>
+      </button>
+    </div>
+    <div class="add-cart-button mt-6">
+      <app-main-button [ButtonText]="'Zum Warenkorb hinzufügen'" (click)="saveQuantity()"></app-main-button>
+    </div>
+  </div>
+
+</div>

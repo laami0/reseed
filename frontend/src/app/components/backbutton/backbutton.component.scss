@@ -1,0 +1,52 @@
+.back-button {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-family: "yorkten-slab-normal", sans-serif;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  padding: 16px 50px;
+  cursor: pointer;
+  color: inherit;
+
+  img {
+    width: 47px;
+    height: 47px;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.back-button-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+
+  border-bottom: 2px solid;
+  width: fit-content;
+}
+
+// specifies color for each theme
+.back-button.dark {
+  color: #1D2A1D; // dark theme = black text
+}
+
+.back-button.light {
+  color: #FFFBF0; // light theme = white text
+}
+
+.back-button-wrapper.dark {
+  border-bottom: 2px solid #1D2A1D; // dark theme = black line
+}
+
+.back-button-wrapper.light {
+  border-bottom: 2px solid #FFFBF0; // light theme = white line
+}

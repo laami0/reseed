@@ -1,0 +1,83 @@
+.navigation {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-bottom: 2px solid #FFFBF0;
+  display: flex;
+  align-items: center;
+  padding-top: 4.6rem;
+  justify-content: right;
+  color: #FFFBF0;
+  z-index: 100;
+}
+
+.logo {
+  width: 47px;
+  height: 47px;
+
+  &.light {
+    color: #FFFBF0;
+  }
+}
+
+.navigation-links {
+  height: 25px;
+  font: normal normal normal 20px/25px Yorkten Slab sans-serif;
+}
+
+.navigation-links a {
+  color: #FEFBF0;
+}
+
+.link-active {
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+/* Search */
+.search-container {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #FFFBF0;
+  border-radius: 35px;
+  color: #FFFBF0;
+}
+
+.search-container input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #FFFBF0;
+  padding-left: 0.5rem;
+  width: 150px;
+}
+
+.search-container input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cart-wrapper {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.cart-icon {
+  font-size: 40px;
+  color: #818F66;
+}
+
+.cart-count {
+  width: 100%;
+  position: absolute;
+  top: 47%;
+  left: 0;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 1px 6px;
+  line-height: 1;
+}

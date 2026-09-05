@@ -1,0 +1,72 @@
+<app-header type="a"></app-header>
+
+<div class="HeadlineFlower">
+  <app-flowerhead HeadlineText="Vom Beet in die Bibliothek" type="chauncy" [layout]="'horizontal'"></app-flowerhead>
+</div>
+
+<!---  ab hier ist die sandwich headline
+
+<div class="headline-row">
+  <div class="flowers-side left">
+    <ng-container *ngFor="let flower of flowers">
+      <app-flowerhead></app-flowerhead>
+    </ng-container>
+  </div>
+
+  <h1 class="headline-text" class="yorkten-demi">Vom Beet in die Bibliothek</h1>
+
+  <div class="flowers-side right">
+    <ng-container *ngFor="let flower of flowers">
+      <app-flowerhead></app-flowerhead>
+    </ng-container>
+  </div>
+</div>
+
+ ENDE hier ist die sandwich headline -->
+
+<div class="imageRow">
+  <img src="szafran-2.jpg" alt="Pflaumen_am_Baum">
+  <img src="szafran-1.jpg" alt="Tomaten Pflanze">
+  <img src="alesiakozik.jpg" alt="Kohlrabi">
+  <img src="eva-bronzini.jpg" alt="Rhabarber">
+
+</div>
+
+<div class=" text yorkten-regular">
+  <p>
+    In unserer digitalen Saatgut-Bibliothek kannst du kostenlos Samen auswählen,<br>
+    pflanzen und später einen Teil der geernteten Samen zurückgeben.
+    So fördern wir <br> gemeinsam die Biodiversität und den nachhaltigen Anbau.
+  </p>
+</div>
+
+
+<h1 class="chauncy specialHeadline">So funktioniert's</h1>
+<div class="iconWheel">
+  <!-- Icon wheel -->
+  <img src="icon_intro.png" alt="Pflaumen_am_Baum" width="400" height="300">
+
+</div>
+
+<app-flowerhead HeadlineText="Mach jetzt mit!"></app-flowerhead>
+
+<div class="pictureBottom">
+  <img src="corin.jpg" alt="Pflaumen_am_Baum" width="400" height="300">
+
+  <div class="textRight">
+    <div class="alignButton">
+      <p class="yorkten-regular">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      </p>
+
+      <a routerLink="/register" routerLinkActive="link-active" ariaCurrentWhenActive="page">
+        <app-main-button ButtonText="Registrieren"></app-main-button>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

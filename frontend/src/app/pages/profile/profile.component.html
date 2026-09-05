@@ -1,0 +1,77 @@
+<app-header type="b" titleText="Dein Garten"></app-header>
+
+<div *ngIf="currentUser as user">
+  <div class="HeadlineMaja">
+    <div class="headline-row">
+      <svg xmlns="http://www.w3.org/2000/svg" width="97" height="97" viewBox="0 0 97 97">
+        <path id="Icon_codicons-account" data-name="Icon codicons-account"
+              d="M97,48.451A48.5,48.5,0,1,0,17.169,85.372c.1.1.194.1.194.194.873.679,1.746,1.358,2.716,2.037a12.957,12.957,0,0,1,1.358,1.061,48.414,48.414,0,0,0,54.329-.006c.476-.285.864-.667,1.349-.964.873-.673,1.843-1.352,2.716-2.031.1-.1.194-.1.194-.194A49.319,49.319,0,0,0,97,48.451ZM48.5,90.9a42.1,42.1,0,0,1-24.347-7.754,19.77,19.77,0,0,1,.485-2.322,25.281,25.281,0,0,1,2.522-6.008,21.331,21.331,0,0,1,3.88-4.947,27.23,27.23,0,0,1,4.947-3.874A24.481,24.481,0,0,1,41.9,63.565a25.749,25.749,0,0,1,24.347,6.2,24.286,24.286,0,0,1,5.238,7.851,25.777,25.777,0,0,1,1.455,5.523A42.619,42.619,0,0,1,48.5,90.9ZM33.659,46.033a15.9,15.9,0,0,1,0-12.41A16.54,16.54,0,0,1,42.292,25,15.128,15.128,0,0,1,48.5,23.741,14.813,14.813,0,0,1,54.708,25a16.54,16.54,0,0,1,8.633,8.621,15.119,15.119,0,0,1,1.261,6.2,14.765,14.765,0,0,1-1.261,6.2,16.523,16.523,0,0,1-8.633,8.627,16.46,16.46,0,0,1-12.513,0,17.217,17.217,0,0,1-5.141-3.486,15.314,15.314,0,0,1-3.4-5.141ZM78.667,78.2c0-.194-.1-.291-.1-.485A31.647,31.647,0,0,0,74.4,69.191a29.6,29.6,0,0,0-6.6-6.881A31.568,31.568,0,0,0,61.5,58.624,17.1,17.1,0,0,0,64.311,56.3a25.463,25.463,0,0,0,3.783-4.753,21.97,21.97,0,0,0,3.2-11.725,22.492,22.492,0,0,0-1.746-8.912A23.032,23.032,0,0,0,64.6,23.644a23.311,23.311,0,0,0-7.275-4.85,23.717,23.717,0,0,0-17.848.006A22.013,22.013,0,0,0,32.2,23.741a23.28,23.28,0,0,0-4.85,7.269,22.492,22.492,0,0,0-1.746,8.912,21.082,21.082,0,0,0,.873,6.1,22.285,22.285,0,0,0,2.425,5.62A22.042,22.042,0,0,0,32.689,56.4a17,17,0,0,0,2.91,2.322A31.04,31.04,0,0,0,29.294,62.5a33.6,33.6,0,0,0-6.6,6.784,30.306,30.306,0,0,0-4.171,8.524,1.055,1.055,0,0,0-.1.485A42.424,42.424,0,1,1,90.986,48.451,42.2,42.2,0,0,1,78.667,78.2Z"
+              fill="#818f66"/>
+      </svg>
+      <app-flowerhead HeadlineText="Hallo {{ user.name }}" type="yorkten-demi"></app-flowerhead>
+    </div>
+  </div>
+
+  <div class="pageLayout columns ">
+    <div class="infoUser yorkten-demi column is-one-quarter is-flex is-align-items-center">
+      <div class="obereInfo">
+        <p>Benutzername: {{ user.name }}</p>
+        <p>Email: {{ user.email }}</p>
+        <hr>
+        <p>Gerade angepflanzt: {{ plantedSeeds.length }}</p>
+        <p>Erfolgreich zurückgegeben: {{ backSeeds.length }}</p>
+      </div>
+    </div>
+
+    <div class="chartCentered column ">
+      <div class="chartWrapper">
+        <app-chart [userNumber]="user.user_number"></app-chart>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!currentUser" class="has-text-centered py-6">
+  <p class="yorkten-demi">Bitte melde dich an, um dein Profil zu sehen.</p>
+</div>
+
+
+<div class="HeadlineMoAnPf mb-6">
+  <!--- 2te Blumen headline --->
+  <app-flowerhead HeadlineText="Momentan angepflanzt" type="yorkten-demi"> </app-flowerhead>
+
+  <div *ngIf="plantedSeeds.length > 0; else emptyGarden" class="">
+    <app-beet [rentListe]="plantedSeeds"></app-beet>
+  </div>
+
+  <ng-template #emptyGarden>
+    <div class="has-text-centered">
+      <p class="profile-empty-garden yorkten-demi">Du hast noch nichts angepflanzt.</p>
+    </div>
+  </ng-template>
+</div>
+
+<div *ngIf="backSeeds.length > 0">
+  <!--- 3te Blumen headline --->
+  <app-flowerhead HeadlineText="Erfolgreich zurückgegeben" type="yorkten-demi"></app-flowerhead>
+
+  <div class="seedTiles">
+    <div class="sliderLeft">
+      <app-next-button-slider direction="left" (clicked)="prevSlide()"></app-next-button-slider>
+      <!--- mit click wird die Aktion ausgelöst --->
+    </div>
+    <div class="tiles" *ngFor="let rent of visibleSeeds">
+      <!--- Tiles  --->
+      <app-saatgut-tile [seedId]="rent.seed.seed_number" [seedTitle]="rent.seed.dt_name"
+                        [seedDescription]="rent.seed.description"
+                        [seedCategory]="rent.seed.category_names"></app-saatgut-tile>
+
+    </div>
+    <div class="sliderRight">
+      <app-next-button-slider direction="right" (clicked)="nextSlide()"></app-next-button-slider>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
+

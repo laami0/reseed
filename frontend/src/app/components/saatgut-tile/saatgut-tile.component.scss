@@ -1,0 +1,47 @@
+.card {
+  --bulma-card-background-color: hsl(45, 33%, 92%);
+  --bulma-card-radius: 2.125rem;
+  --bulma-card-header-weight: 400;
+}
+
+.tile {
+  background-color: #F0ECE1 !important;
+  height: 100%;
+  max-width: 19.75rem;
+  border-radius: 34px;
+  border: 2px solid #818F66;
+
+  .tile-image {
+    height: 22.25rem;
+    overflow: hidden;
+
+    figure {
+      height: 100%;
+      width: 100%;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 34px;
+    }
+  }
+
+  .tile-content {
+    background-color: #F0ECE1 !important;
+  }
+
+  .seed-title {
+    font-size: 30px;
+  }
+
+  .seed-description {
+    font-size: 20px;
+  }
+
+  .seed-category {
+    font-size: 20px;
+  }
+}

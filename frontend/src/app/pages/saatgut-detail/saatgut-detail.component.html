@@ -1,0 +1,61 @@
+<app-header type="c"></app-header>
+
+<app-backbutton theme="dark"></app-backbutton>
+
+<div class=wrapper *ngIf="saatgut">
+    <div class="left">
+        <img class="hauptBild" src="szafran-1.jpg" alt="saatgut image" />
+    </div>
+    <div class="right">
+        <div class="titleDetail yorkten-bold"> {{saatgut.dt_name}}</div>
+        <div class="subtitleDetail yorkten-demi"> {{saatgut.lt_name}}</div>
+        <div class="categoryDetail yorkten-light"> {{saatgut.category_names}}</div>
+        <div class="descriptionDetail yorkten-regular"> {{saatgut.description}}</div>
+
+      <div class="yorkten-regular"> Verfügbar: {{saatgut.stock}}</div>
+
+      <app-quantity-counter type="detailpage" [item]="position"></app-quantity-counter>
+
+        <div class="categoryheadline yorkten-demi"> Klima Bedingungen </div>
+        <div class="categorypoint">
+            <img class="detailLogo" src="sonne.svg" alt="saatgut image" />
+            <div class="categorypoint-text yorkten-light"> {{saatgut.climate}}</div>
+        </div>
+        <div class="categorypoint">
+            <img class="detailLogo" src="wasser.svg" alt="saatgut image" />
+            <div class="categorypoint-text yorkten-light"> {{saatgut.water}}</div>
+        </div>
+        <div class="categorypoint">
+            <img class="detailLogo" src="blatt.svg" alt="saatgut image" />
+            <div class="categorypoint-text yorkten-light"> {{saatgut.sun? "Sonnig": "Schatten"}}</div>
+        </div>
+
+        <div class="categoryheadline yorkten-demi"> Aussaatzeit </div>
+        <div class="categorypoint">
+            <img class="detailLogo" src="aussaat.svg" alt="saatgut image" />
+            <div class="categorypoint-text yorkten-light"> {{saatgut.plant_time}}</div>
+        </div>
+    </div>
+</div>
+
+<div class="moreSeeds yorkten-demi"> Ähnliches Saatgut </div>
+
+<div class="seedTiles">
+    <div class="sliderLeft" >
+        <app-next-button-slider direction="left" (clicked)="prevSlide()"></app-next-button-slider>
+    </div>
+        <div class="tiles" *ngFor="let seed of visibleSeeds">
+            <app-saatgut-tile
+                [seedId]="seed.seed_number"
+                [seedTitle]="seed.dt_name"
+                [seedDescription]="seed.description"
+                [seedCategory]="seed.category_names">
+            </app-saatgut-tile>
+        </div>
+    <div class="sliderRight">
+        <app-next-button-slider direction="right" (clicked)="nextSlide()"></app-next-button-slider>
+    </div>
+</div>
+
+<app-footer></app-footer>
+

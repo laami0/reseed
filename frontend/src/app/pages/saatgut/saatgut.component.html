@@ -1,0 +1,28 @@
+<app-header type="b" titleText="Finde dein Saatgut"></app-header>
+
+<div class="seeds-list-header-container">
+
+  <div class="filter-title yorkten-demi filter-content header">Filter</div>
+
+  <app-searchbar [type]="'b'" (notify)="onSearchBarChange($event)"></app-searchbar>
+</div>
+
+<div class="layout-container">
+  <div #filterContainer id="filter-container" class="filter-flower-column">
+    <app-filter class="filter-panel" (notify)="onFilterChange($event)"></app-filter>
+    <app-flowerhead class="sidebar-flower" [layout]="'vertical'" [containerHeight]="flowerContainerHeight"></app-flowerhead>
+  </div>
+
+  <div class="tiles-container">
+    <div *ngFor="let saatgut of saatgutListeFiltered">
+      <app-saatgut-tile
+        [seedId]="saatgut.seed_number"
+        [seedTitle]="saatgut.dt_name"
+        [seedDescription]="saatgut.description"
+        [seedCategory]="saatgut.category_names">
+      </app-saatgut-tile>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

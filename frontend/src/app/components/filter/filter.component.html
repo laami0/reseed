@@ -1,0 +1,16 @@
+<div class="filter-section" *ngFor="let category of filterData">
+  <div class="filter-content">
+    <div class="filter-title yorkten-demi">{{ category.title }}</div>
+
+    <div *ngFor="let item of category.options">
+      <app-selection
+        type="checkbox"
+        [label]="item.label"
+        [state]="item.state"
+        (stateChange)="onStateChange(category.title, item.label, $event)">
+      </app-selection>
+    </div>
+  </div>
+
+  <hr class="divider" />
+</div>

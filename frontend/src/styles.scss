@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  background: #FFFBF0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+body {
+  background: #FFFBF0;
+  font-family: 'yorkten-slab', sans-serif;
+  margin: 0;
+  height: fit-content;
+}
+
+.chauncy {
+  font-family: "chauncy-pro", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.yorkten-light {
+  font-family: "yorkten-slab-normal", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.yorkten-regular {
+  font-family: "yorkten-slab-normal", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.yorkten-medium {
+  font-family: "yorkten-slab-normal", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.yorkten-demi {
+  font-family: "yorkten-slab-normal", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.yorkten-bold {
+  font-family: "yorkten-slab-normal", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.yorkten-exbold {
+  font-family: "yorkten-slab-normal", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+

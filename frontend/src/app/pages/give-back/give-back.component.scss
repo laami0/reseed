@@ -1,0 +1,78 @@
+.allHeadline {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+margin-bottom: 0.5rem;
+  color: #1D2A1D;
+}
+
+
+.button-row {
+  display: flex;
+  gap: 1.5rem; // Abstand zwischen Buttons
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+  .headlineFlower {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .flowers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+
+.section-form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+  margin-left: 12rem;
+  width: 80%;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  color: #1D2A1D;
+  margin-bottom: 0.5rem;
+}
+
+.section-divider {
+  border-top: 2px solid #1D2A1D;
+  opacity: 0.5;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.form-group {
+  margin-bottom: 2rem; // Abstand zur nächsten Gruppe
+}
+
+.label {
+  margin-bottom: 0.4rem; // enger am Inhalt
+  margin-top: 0rem; // entfällt, da .form-group genug Abstand erzeugt
+  color: #1D2A1D;
+}
+
+.hinweistext {
+  margin-top: 0rem;
+}
+
+.seedInfoBox {
+  width: 199px;
+  height: 45px;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #1D2A1D;
+  border-radius: 35px;
+  background-color: #FFFBF0;
+  color: #1D2A1D;
+  font-size: 1rem;
+}

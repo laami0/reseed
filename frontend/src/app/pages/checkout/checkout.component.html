@@ -1,0 +1,161 @@
+<app-header type="c"></app-header>
+
+<app-backbutton type="dark"></app-backbutton>
+
+<app-flowerhead HeadlineText="Checkout"></app-flowerhead>
+
+<div class="checkout-container mx-6 mt-6">
+  <form class="checkout-form" (ngSubmit)="onSubmit()" #checkoutForm="ngForm">
+    <div class="checkout-header">
+      <p class="yorkten-medium">Lieferadresse eingeben</p>
+    </div>
+
+    <div class="columns mt-6 no-margin">
+      <div class="column is-half no-padding">
+
+        <div class="columns no-margin">
+          <div class="column no-padding mr-4">
+            <div class="field">
+              <app-textfield
+                label="Vorname"
+                type="text"
+                placeholder="Max"
+                length="short"
+                [value]="address.first_name"
+                (valueChange)="address.first_name = $event"
+              ></app-textfield>
+            </div>
+          </div>
+          <div class="column no-padding ml-4">
+            <div class="field">
+              <app-textfield
+                label="Nachname"
+                type="text"
+                placeholder="Mustermann"
+                length="short"
+                [value]="address.last_name"
+                (valueChange)="address.last_name = $event"
+              ></app-textfield>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns no-margin">
+          <div class="column no-padding">
+            <div class="field">
+              <app-textfield
+                label="Email"
+                type="text"
+                placeholder="MaxMustermann@gmail.com"
+                length="long"
+                [value]="address.email"
+                (valueChange)="address.email = $event"
+              ></app-textfield>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns no-margin">
+          <div class="column no-padding">
+            <div class="field">
+              <app-textfield
+                label="Adresse & Hausnummer"
+                type="text"
+                placeholder="Musterstraße 100"
+                length="long"
+                [value]="address.street"
+                (valueChange)="address.street = $event"
+              ></app-textfield>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns no-margin">
+          <div class="column no-padding">
+            <div class="field">
+              <app-textfield
+                label="Adresszusatz"
+                type="text"
+                placeholder="03. Obergeschoss"
+                length="long"
+                [value]="address.addition"
+                (valueChange)="address.addition = $event"
+              ></app-textfield>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns no-margin">
+          <div class="column no-padding mr-4">
+            <div class="field">
+              <app-textfield
+                label="PLZ"
+                type="number"
+                placeholder="12345"
+                length="short"
+                [value]="address.plz"
+                (valueChange)="address.plz = +$event"
+              ></app-textfield>
+            </div>
+          </div>
+          <div class="column no-padding ml-4">
+            <div class="field">
+              <app-textfield
+                label="Ort"
+                type="text"
+                placeholder="Musterhausen"
+                length="short"
+                [value]="address.city"
+                (valueChange)="address.city = $event"
+              ></app-textfield>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="checkout-header shipment">
+      <p class="yorkten-medium">Versand Optionen</p>
+    </div>
+
+    <div class="columns my-6 no-margin ">
+      <div class="column is-half no-padding">
+        <div class="columns no-margin">
+          <div class="column no-padding mr-4">
+            <div class="field">
+              <app-selection
+                type="radio"
+                labelTitle="Standard Versand"
+                labelInfo="3-4 Tage"
+                labelCarrier="DHL"
+                [state] = "deliveryType === 'standard' ? 'selected' : 'unselected'"
+                (stateChange)="onStateChange('standard', $event)"></app-selection>
+            </div>
+          </div>
+          <div class="column no-padding ml-4">
+            <div class="field">
+              <app-selection
+                type="radio"
+                labelTitle="Express Versand"
+                labelInfo="1-2 Tage"
+                labelCarrier="DPD"
+                [state] = "deliveryType === 'express' ? 'selected' : 'unselected'"
+                (stateChange)="onStateChange('express', $event)"></app-selection>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="errorMessage" class="notification is-warning mb-6">
+      <p>{{ errorMessage }}</p>
+    </div>
+
+    <div class="field checkout-form-button">
+      <app-main-button ButtonText="Jetzt bestellen"></app-main-button>
+    </div>
+  </form>
+</div>
+
+<app-footer></app-footer>

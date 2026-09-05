@@ -1,0 +1,28 @@
+.checkout-container {
+  margin-bottom: 4.5rem;
+}
+
+.checkout-header {
+  border-bottom: 2px solid #1D2A1D;
+  font-size: 25px;
+
+  &.shipment {
+    margin-top: 2.75rem;
+  }
+}
+
+.checkout-form {
+  margin-top: 2.75rem;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+  margin-inline-start: 0;
+}
+
+.checkout-form-button {
+}

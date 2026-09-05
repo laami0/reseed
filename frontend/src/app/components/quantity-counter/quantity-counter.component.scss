@@ -1,0 +1,42 @@
+.counter-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+}
+
+.counter-btn {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #1D2A1D;
+  background: transparent;
+  border-radius: 11px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1D2A1D;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: #1D2A1D;
+    color: #F0ECE1;
+  }
+}
+
+.counter-value {
+  font-size: 25px;
+  font-weight: bold;
+  color: #1D2A1D;
+  min-width: 20px;
+  text-align: center;
+}
+
+.material-icons {
+  font-weight: 500;
+}
+
+.add-cart-button {
+
+}

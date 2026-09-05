@@ -1,0 +1,75 @@
+<div class="columns is-7">
+
+  <div class="column is-three-fifths">
+    <div class="back-button-container">
+      <app-backbutton theme="light"></app-backbutton>
+    </div>
+    <div class="panel-background left-panel">
+      <app-flowerhead class="chauncy flower-edge" [layout]="'vertical'"></app-flowerhead>
+    </div>
+  </div>
+
+  <div class="column register-form">
+    <div class="yorkten-demi register-title mb-2">Registrieren</div>
+
+    <form class="register-form-elements" (ngSubmit)="onSubmit()" #registerForm="ngForm">
+      <div class="field">
+        <app-textfield
+          label="Benutzername"
+          type="text"
+          placeholder="Max Mustermann"
+          length="short"
+          (valueChange)="user.name = $event"
+        ></app-textfield>
+      </div>
+
+      <div class="field">
+        <app-textfield
+          label="Email"
+          type="email"
+          placeholder="z.B. max@example.com"
+          length="short"
+          (valueChange)="user.email = $event"
+        ></app-textfield>
+      </div>
+
+      <div class="field">
+        <app-textfield
+          label="Passwort"
+          type="password"
+          placeholder="min. 8 Zeichen"
+          length="short"
+          (valueChange)="user.password = $event"
+        ></app-textfield>
+      </div>
+
+      <div class="field">
+        <app-textfield
+          label="Passwort"
+          type="password"
+          placeholder="min. 8 Zeichen"
+          length="short"
+          (valueChange)="confirmPassword = $event"
+        ></app-textfield>
+      </div>
+
+      <div class="field register-form-button">
+        <app-main-button ButtonText="Registrieren"></app-main-button>
+      </div>
+
+      <div *ngIf="errorMessage" class="notification is-danger">
+        {{ errorMessage }}
+      </div>
+
+      <div *ngIf="registrationSuccess" class="notification is-success">
+        Registrierung erfolgreich!
+      </div>
+
+      <p class="has-text-centered mt-4">
+        Du hast schon ein Account?
+        <a href="/login">Anmelden</a>
+      </p>
+    </form>
+
+  </div>
+</div>

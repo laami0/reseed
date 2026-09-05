@@ -1,0 +1,85 @@
+.hauptBild {
+    margin: auto;
+    width: 30rem;
+    height: auto;
+    display: block;
+    border-radius: 34px;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%; 
+    height: 100%;
+    .left,
+    .right {
+        flex: 1 1 50%;
+        box-sizing: border-box;
+        padding: 1rem;
+    }
+}
+
+.titleDetail {
+    font-size: 42px;
+    margin-bottom: -0.4rem;
+}
+
+.subtitleDetail {
+    font-size: 30px;
+    margin-bottom: -0.3rem;
+}
+
+.categoryDetail {
+    font-size: 30px;
+    margin-bottom: 0.7em;
+}
+
+.descriptionDetail {
+    font-size: 22px;
+    margin-bottom: 2em;
+}
+
+.categoryheadline {
+    font-size: 24px;
+    border-bottom: 2px solid #1D2A1D;
+    margin-top: 2em;
+}
+
+.categorypoint {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    column-gap: 2rem;   
+    align-items: center;
+    margin: 1rem;
+    .img {
+        width: 5rem;
+    }
+    .categorypoint-text{
+        font-size: 20px;
+        opacity: 0.8;
+    }
+
+}
+
+.seedTiles{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 8rem;
+}
+
+.sliderLeft{
+    align-content: center;    
+}
+
+.sliderRight{
+    align-content: center;
+}
+
+.moreSeeds {
+    margin: 4rem;
+    font-size: 24px;
+    border-bottom: 2px solid #1D2A1D;
+    margin-top: 2em;
+}

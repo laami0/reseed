@@ -1,0 +1,56 @@
+<app-header type="c" titleText="Finde dein Saatgut"></app-header>
+
+<div>
+  <app-backbutton theme="dark"></app-backbutton>
+</div>
+
+<div class="checkout-headline-wrapper">
+  <app-flowerhead HeadlineText="Warenkorb"></app-flowerhead>
+</div>
+
+<div class="cart-container">
+
+  <div *ngIf="errorMessage" class="notification is-warning my-6">
+    <p>{{ errorMessage }}</p>
+  </div>
+
+  <!-- Header-Zeile -->
+  <div class="cart-header-container">
+    <div class="columns is-mobile is-vcentered cart-header mb-4 py-3 pl-6">
+      <div class="column is-half yorkten-demi cart-header-item p-0">Saatgut</div>
+      <div class="column is-half yorkten-demi cart-header-item p-0">Menge</div>
+    </div>
+  </div>
+
+  <!-- Dynamische Zeilen -->
+
+  <div *ngIf="cartItems.length > 0; else emptyCart">
+    <div *ngFor="let item of cartItems" class="columns is-mobile is-vcentered cart-item py-2">
+      <div class="column is-half pl-6">
+        <p class="cart-item-title yorkten-demi">{{ item.seed.dt_name }}</p>
+        <p class="cart-item-subtitle yorkten-regular">{{ item.seed.lt_name }}</p>
+        <p class="cart-item-category yorkten-light">{{ item.seed.category_names }}</p>
+      </div>
+
+      <div class="column is-half quantity-control-wrapper">
+        <app-quantity-counter type="checkout" [item]="item"></app-quantity-counter>
+        <button class="remove-button" (click)="removeFromCart(item)">
+          <span class="material-icons material-symbols-outlined">delete</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #emptyCart>
+    <div class="column cart-item has-text-centered">
+      <p class="cart-empty-text yorkten-demi">Dein Warenkorb ist leer.</p>
+    </div>
+  </ng-template>
+
+  <div class="checkout-button-container">
+    <app-main-button [ButtonText]="'Weiter zur Adresseingabe'" (click)="handleCheckoutNextStep()"></app-main-button>
+  </div>
+
+</div>
+
+<app-footer></app-footer>

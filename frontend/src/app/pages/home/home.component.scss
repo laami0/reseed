@@ -1,0 +1,167 @@
+/* Anfang sandwich Flower headline
+
+.headline-row {
+  margin-top: 8.4rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow: hidden;
+  gap: 2rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.flowers-side {
+  display: flex;
+  flex: 1 1 0;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  min-width: 0;
+  max-width: 100%;
+  justify-content: flex-end;
+  gap: 2rem;
+  align-items: center;
+}
+
+.headline-text {
+  flex-shrink: 0;
+  white-space: nowrap;
+  text-align: center;
+}
+.yorkten-demi{
+  font-size: 3.75rem;
+}
+
+app-flowerhead {
+  flex: 0 0 auto;
+  width: 2rem;
+
+}
+
+.flowers-side.left {
+  justify-content: flex-end;
+}
+
+.flowers-side.right {
+  justify-content: flex-start;
+}
+
+ ENDE sandwich Flower headline */
+/* ---------------------------- */
+
+/* Anfang Bilderreihe */
+.imageRow {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;          /* allows wrapping only when absolutely needed */
+  gap: 2rem;                /* spacing between images */
+  margin: 5rem auto;
+  padding: 0 2rem;
+  max-width: 100%;
+}
+
+.imageRow img {
+  flex: 1 1 calc(25% - 2rem);  /* responsive 4-per-row layout */
+  max-width: 400px;           /* never get too big */
+  min-width: 200px;           /* don’t shrink into oblivion */
+  border-radius: 2rem;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.imageRow img:first-child,
+.imageRow img:last-child {
+  transform: translateY(-30px);
+}
+
+.text {
+  max-width: 2000px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.yorkten-regular {
+  font-size: 2rem;
+}
+
+.HeadlineFlower{
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+}
+
+/* -------------------- */
+/* So funktionierts Section */
+.iconWheel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 3rem;
+
+}
+
+.iconWheel img {
+  width: 1200px;
+  max-width: 100%;
+  height: auto;
+}
+
+
+.specialHeadline{
+  border-bottom: 2px solid #1D2A1D;
+  width: 1200px;
+  padding-left: 3rem;
+  margin-bottom: 3rem;
+  white-space: nowrap;
+  margin-right: 1rem;
+  flex-shrink: 0; // headline darf nie schrumpfen
+  font-size: 60px;
+  text-shadow: 0 3px 6px #818F66;
+}
+
+/* -------------------- */
+/* Mach jetzt mit section */
+.pictureBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+}
+
+.pictureBottom img {
+  width: 850px;
+  height: 530px;
+  border-radius: 2rem;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.textRight {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alignButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  // centers button und text
+  max-width: 600px;
+  gap: 2rem;
+  text-align: left;
+}
+
+.alignButton p {
+  font-size: 2rem;
+  line-height: 1.6;
+}

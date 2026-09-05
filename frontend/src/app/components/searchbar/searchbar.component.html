@@ -1,0 +1,23 @@
+<div [ngSwitch]="type">
+
+  <!-- Variante A -->
+  <div *ngSwitchCase="'a'" class="search-bar search-bar-a">
+    <div class="search-bar">
+    <span class="material-icons">search</span>
+    <input type="text" class="search-input yorkten-light" placeholder="Suche"
+           [(ngModel)]="searchText" required
+           (change)="onChange()"
+    >
+    </div>
+  </div>
+
+  <!-- Variante B -->
+  <div *ngSwitchCase="'b'" class="search-bar search-bar-b">
+    <div class="search-bar">
+    <span class="material-icons">search</span>
+    <input type="text" class="search-input yorkten-light" placeholder="Suche nach Saatgut"
+           [(ngModel)]="searchText" required
+           (change)="onChange()"
+    >
+    </div>
+  </div>

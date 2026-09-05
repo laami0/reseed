@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 424.73 80">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 5px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #1d2a1d;
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-5 {
+        fill: #bfc4aa;
+      }
+
+      .cls-6 {
+        fill: #818f66;
+      }
+
+      .cls-7 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-8 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-3" x="2.5" y="19.5" width="419.73" height="2"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-3" x="3" y="39" width="419" height="2"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <rect class="cls-3" x="2.5" y="58.5" width="419.73" height="2"/>
+    </clipPath>
+  </defs>
+  <g id="Gruppe_27" data-name="Gruppe 27">
+    <g id="Rechteck_53" data-name="Rechteck 53">
+      <rect class="cls-5" x="9" width="414" height="80" rx="20" ry="20"/>
+      <rect class="cls-2" x="10" y="1" width="412" height="78" rx="19" ry="19"/>
+    </g>
+    <rect id="Rechteck_59" data-name="Rechteck 59" class="cls-5" x="3" width="72" height="80"/>
+    <g id="Rechteck_55" data-name="Rechteck 55">
+      <rect id="fill" class="cls-6" x="2.5" y="19.5" width="419.73" height="2"/>
+      <g class="cls-8">
+        <path class="cls-1" d="M2.5,19h419.73M419.73,19.5v2M422.23,22H2.5M5,21.5v-2"/>
+      </g>
+    </g>
+    <g id="Rechteck_56" data-name="Rechteck 56">
+      <rect id="fill-2" class="cls-6" x="3" y="39" width="419" height="2"/>
+      <g class="cls-4">
+        <path class="cls-1" d="M3,38.5h419M419.5,39v2M422,41.5H3M5.5,41v-2"/>
+      </g>
+    </g>
+    <g id="Rechteck_54" data-name="Rechteck 54">
+      <rect class="cls-6" x="3" width="394" height="2"/>
+      <polygon class="cls-2" points="4 1 396 1 396 1 4 1"/>
+    </g>
+    <g id="Rechteck_57" data-name="Rechteck 57">
+      <rect class="cls-6" x="3" y="78" width="395" height="2"/>
+      <polygon class="cls-2" points="4 79 397 79 397 79 4 79"/>
+    </g>
+    <g id="Rechteck_58" data-name="Rechteck 58">
+      <rect id="fill-3" class="cls-6" x="2.5" y="58.5" width="419.73" height="2"/>
+      <g class="cls-7">
+        <path class="cls-1" d="M2.5,58h419.73M419.73,58.5v2M422.23,61H2.5M5,60.5v-2"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,77 @@
+.layout-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 1rem;
+
+  .filter-flower-column {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    position: relative;
+    height: fit-content;
+
+    .filter-panel {
+      width: max-content;
+      height: fit-content;
+      flex-shrink: 0;
+    }
+
+    .sidebar-flower {
+      position: relative;
+      height: 100%;
+      left: -4rem;
+      z-index: 1;
+      pointer-events: none;
+    }
+  }
+
+  .tiles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // Max 3 columns
+    gap: 1.5rem;
+    padding-top: 2rem;
+    width: 100%;
+  }
+}
+
+.seeds-list-header-container {
+  border-bottom: 2px solid #1D2A1D;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 4rem 1rem 1rem;
+  width: 100%;
+
+  .cart-wrapper {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+
+    .cart-icon {
+      font-size: 40px;
+      color: #818F66;
+    }
+
+    .cart-count {
+      position: absolute;
+      bottom: 9px;
+      left: 10px;
+      background-color: #818F66;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+      padding: 1px 6px;
+      line-height: 1;
+    }
+  }
+}
+
+.filter-title {
+  margin-left: 150px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #1D2A1D;
+  text-align: left;
+}

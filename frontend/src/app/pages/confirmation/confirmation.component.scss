@@ -1,0 +1,53 @@
+.confirmation-container {
+  margin-top: 5rem;
+  margin-left: 22rem;
+  margin-right: 22rem;
+}
+
+.confirmation-header-container {
+  font-size: 25px;
+  border-bottom: 2px solid #1D2A1D;
+
+  &.address-header-container {
+    margin-top: 4.5rem;
+  }
+}
+
+.confirmation-item {
+  border-bottom: 2px solid #1D2A1D;
+  margin: 0;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.confirmation-item-title {
+  font-size: 30px;
+}
+
+.confirmation-item-subtitle {
+  font-size: 20px;
+}
+
+.confirmation-item-category {
+  font-size: 20px;
+}
+
+.contact-container {
+  margin-bottom: 4.5rem;
+}
+
+.address-title {
+  font-size: 20px;
+}
+
+.address-subtitle {
+  font-size: 16px;
+}
+
+.address-content {
+  font-size: 16px;
+}
+
+.confirmation-item-quantity {
+  font-size: 25px;
+}

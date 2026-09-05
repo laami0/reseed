@@ -1,0 +1,20 @@
+.chartContainer {
+  width: 1000px;
+  height: 360px;
+  padding: 1rem;
+  margin: 0 auto;
+
+
+  background-color: #f3f0e8;
+  border: 1px solid #818f66;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas {
+  width: 1000px;
+  height: 350px;
+}

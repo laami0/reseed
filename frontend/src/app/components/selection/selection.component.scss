@@ -1,0 +1,72 @@
+// Checkbox Styles
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.checkbox-selected, .checkbox-unselected {
+  width: 29px;
+  height: 29px;
+  border-radius: 11px;
+  border: 2px solid #1D2A1D;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.checkbox-unselected {
+  background: #FFFBF0;
+}
+
+.checkbox-selected {
+  background: #818F66;
+}
+
+.checkbox-label {
+  font-size: 20px;
+  color: #1D2A1D;
+}
+
+// Radio Styles
+
+.radio-option {
+  display: flex;
+  cursor: pointer;
+  align-items: flex-start;
+}
+
+.custom-radio {
+  width: 29px;
+  height: 29px;
+  border: 2px solid #1D2A1D;
+  border-radius: 11px;
+  background: #FFFBF0;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.custom-radio-selected {
+  background: #818F66;
+}
+
+.custom-radio-unselected {
+  background: #FFFBF0;
+}
+
+.label {
+  text-align: left;
+  color: #1D2A1D;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+
+.label .title {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.label .info,
+.label .carrier {
+  font-size: 16px;
+}

@@ -1,0 +1,21 @@
+<div [ngSwitch]="type">
+
+  <!-- Variante A -->
+  <div *ngSwitchCase="'a'" class="header header-a">
+    <header class="custom-header">
+        <div class="header-title chauncy">RESEED</div>
+    </header>
+  </div>
+
+  <!-- Variante B -->
+  <div *ngSwitchCase="'b'" class="header header-b">
+    <header class="custom-header">
+        <div class="header-title chauncy">{{ titleText }}</div> <!--Hier variabel/ definiere: [titleText]="'Überschrift'"-->
+    </header>
+  </div>
+
+  <!-- Variante C -->
+  <div *ngSwitchCase="'c'" class="header header-c">
+      <header class="custom-header"></header>
+  </div>
+</div>

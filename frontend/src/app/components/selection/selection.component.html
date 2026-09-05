@@ -1,0 +1,23 @@
+<div [ngSwitch]="type">
+
+  <!-- Variante Checkbox-->
+  <div *ngSwitchCase="'checkbox'" class="checkbox-container">
+    <div class="checkbox-box"
+         [ngClass]="state === 'selected' ? 'checkbox-selected' : 'checkbox-unselected'"
+         (click)="toggle()"></div>
+    <span class="checkbox-label yorkten-regular">{{ label }}</span>
+  </div>
+
+  <!-- Variante Radio-->
+  <div *ngSwitchCase="'radio'" class="radio-option" >
+    <div class="custom-radio"
+         [ngClass]="state === 'selected' ? 'custom-radio-selected' : 'custom-radio-unselected'"
+         (click)="toggle()"></div>
+    <div class="label">
+      <div class="title yorkten-bold">{{ labelTitle }}</div>
+      <div class="info yorkten-regular">{{ labelInfo }}</div>
+      <div class="carrier yorkten-regular">{{ labelCarrier }}</div>
+    </div>
+  </div>
+
+</div>

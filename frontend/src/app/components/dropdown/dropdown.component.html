@@ -1,0 +1,16 @@
+<div class="dropdown-wrapper">
+  <div class="dropdown-label yorkten-bold">{{ label }}</div>
+  <div class="dropdown" (click)="toggleDropdown()">
+    <span class="selected yorkten-regular">{{ selected || 'Bitte wählen' }}</span>
+    <span class="arrow" [class.open]="isOpen()" aria-hidden="true">
+      <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L6 6L11 1" stroke="#1D2A1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+  </div>
+  <ul class="dropdown-list" *ngIf="isOpen()">
+    <li *ngFor="let option of options" class="yorkten-regular" (click)="selectOption(option)">
+      {{ option }}
+    </li>
+  </ul>
+</div>

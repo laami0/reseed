@@ -1,0 +1,23 @@
+.textfield-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  height: 43px;
+  border: 2px solid #1D2A1D;
+  background: transparent;
+  border-radius: 35px;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+}

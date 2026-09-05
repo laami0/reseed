@@ -1,0 +1,113 @@
+/*
+
+.HeadlineMaja ::ng-deep .yorkten-demi {
+  font-size: 30px;
+}
+
+Muss das mit dem ng deep besser machen. Irgendwie bei der NGClass oder einfach in
+ der StyleCss eine Klasse einfügen mit der Größe
+*/
+
+/* Top Section */
+
+.HeadlineMaja {
+  width: 100%;
+}
+
+.headline-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 5rem 0 3rem;
+  padding-right: 3rem;
+  box-sizing: border-box;
+}
+
+.headline-row svg {
+  flex-shrink: 0;
+  width: 6rem;
+  height: 6rem;
+  margin-top: 0;
+}
+
+.headline-row app-flowerhead {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+}
+
+
+.infoUser p{
+  padding-bottom: 1rem;
+}
+
+hr {
+  border-bottom: 2px solid #1D2A1D;
+
+}
+
+.obereInfo{
+
+  width: 320px;
+  margin-bottom: 1rem;
+}
+
+.untereInfo{
+  margin-bottom: 3rem;
+}
+
+.profileOverview {
+  display: grid;
+  grid-template-columns: 300px 1fr; // fixed left, flexible right
+  align-items: start;
+  gap: 40px;
+  margin: 20px auto;
+  max-width: 1200px; // center limit
+}
+
+.pageLayout {
+
+}
+
+.infoUser {
+  font-size: 20px;
+  margin-left: 3rem;
+
+
+}
+
+
+
+
+/* Middle section*/
+
+
+/* Bottom section Bereits geerntete Pflanzen*/
+.seedTiles{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 8rem;
+}
+
+ .tiles{
+
+
+ }
+
+.sliderLeft{
+  align-content: center;
+}
+
+.sliderRight{
+  align-content: center;
+}
+
+.profile-empty-garden {
+  justify-content: center;
+  font-size: 30px;
+}

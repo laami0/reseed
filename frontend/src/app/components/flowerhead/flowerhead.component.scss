@@ -1,0 +1,71 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.allHeadline {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 1rem 0;
+  gap: 4.25rem;
+}
+
+.headlineFlower {
+  white-space: nowrap;
+  margin-right: 1rem;
+  flex-shrink: 0; // headline darf nie schrumpfen
+  font-size: 60px;
+  text-shadow: 0 3px 6px #818F66;
+
+}
+
+.flowers {
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 1; // nimmt den restlichen Platz
+  overflow: hidden;
+  gap: 1rem;
+}
+
+.flower-wrapper {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin-right: 0.25rem;
+
+}
+
+//layout options
+.flowers.horizontal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex: 1;
+  gap: 1rem;
+}
+
+.flowers.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.flower-wrapper {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+
+  // tweak margin depending on layout
+  .flowers.vertical & {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .flowers.horizontal & {
+    margin: 0 0.25rem 0 0;
+  }
+}
